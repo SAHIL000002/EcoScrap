@@ -19,10 +19,36 @@ git commit -m "EcoScrap: mobile app (screens 1-11) + API"
 
 `backend/.env` must stay out of git; only `.env.example` is committed.
 
+## 0b. Fixing a service that already exists (Root Directory = `src`)
+
+If a build failed with
+
+```
+npm error path /opt/render/project/src/package.json
+ENOENT: no such file or directory
+```
+
+the service is running in the wrong directory: there is no `package.json` in
+`src/`, the Node package lives in `backend/`. Correct the service settings
+(**Settings → Build & Deploy**):
+
+| Field | Value |
+|---|---|
+| Root Directory | `backend` |
+| Build Command | `npm ci --omit=dev` |
+| Start Command | `npm start` |
+| Health Check Path | `/api/v1/health` |
+
+With `Root Directory = backend` every command runs with
+`cwd = /opt/render/project/backend`, so `npm ci` installs `backend/package.json`
+and `npm start` runs `node src/server.js` — the existing entry point, unchanged.
+The repo-root `render.yaml` encodes exactly these values for new Blueprints.
+
 ## 1. Render (recommended — free tier, stable URL)
 
 1. Render dashboard → **New +** → **Blueprint** → select the repository.
-2. Render reads `render.yaml` and prompts for the values marked `sync: false`:
+2. Render reads the **repository-root** `render.yaml` and prompts for the values
+   marked `sync: false`:
    - `MONGO_URI` — the existing Atlas URI (same value as `backend/.env`), so the
      deployed API serves the already-seeded data.
    - `CLOUDINARY_CLOUD_NAME` / `CLOUDINARY_API_KEY` / `CLOUDINARY_API_SECRET` —

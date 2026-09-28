@@ -1,0 +1,52 @@
+# EcoScrap API — Render Blueprint
+# https://render.com/docs/blueprint-spec
+#
+# WHY THIS FILE LIVES AT THE REPOSITORY ROOT
+#   Render only discovers a blueprint at the root of the repository. The Node
+#   service itself lives in `backend/`, so the service below declares
+#   `rootDir: backend` — Render then runs every command with
+#   cwd = /opt/render/project/backend, which is exactly where package.json is.
+#
+#   Repo layout:
+#     backend/package.json      <- the package Render installs (main: src/server.js)
+#     backend/src/server.js     <- entry point started by `npm start`
+#     mobile-app/               <- Expo app (not deployed by Render)
+#
+# Deploy: New + -> Blueprint -> select this repository. Render then asks for the
+# values marked `sync: false` (MONGO_URI and the optional Cloudinary keys).
+services:
+  - type: web
+    name: ecoscrap-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    # package.json + package-lock.json live in backend/, so the lockfile is in
+    # sync and `npm ci` gives a reproducible install.
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      # Existing MongoDB Atlas cluster (mongodb+srv://...). Paste the same URI
+      # that is in backend/.env so the deployed API sees the seeded data.
+      - key: MONGO_URI
+        sync: false
+      # Render generates a strong secret on first deploy - do not hardcode one.
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      # Optional: without these the API still works, but photo uploads fall back
+      # to ephemeral local storage (see ImageService).
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLIENT_URL
+        sync: false
