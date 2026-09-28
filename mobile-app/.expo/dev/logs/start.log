@@ -1,0 +1,197 @@
+{"_e":"root:init","_t":1790535617789,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790535617792,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790535617806,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790535624512,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790535625611,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790535629366,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790535635226,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790535638796,"id":"1","platform":"ios","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:done","_t":1790535664384,"id":"1","total":753,"ms":25587.6859}
+{"_e":"root:init","_t":1790535765041,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790535765043,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790535765056,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790535765801,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790535766673,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790535767429,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790535767830,"atlas":false,"workers":10,"host":"::","port":8082}
+{"_e":"metro:bundling:started","_t":1790535820333,"id":"1","platform":"web","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:done","_t":1790535849735,"id":"1","total":246,"ms":29401.904}
+{"_e":"metro:bundling:started","_t":1790535858572,"id":"2","platform":"web","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:done","_t":1790535858611,"id":"2","total":1,"ms":38.6457}
+{"_e":"root:init","_t":1790536097379,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790536097421,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790536097463,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790536105162,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790536109930,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790536115323,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790536133657,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790536188130,"id":"4","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790536188131,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790536188140,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790536192894,"id":"4","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1790536193007,"id":"4","progress":0.010000000000000002,"total":3,"current":1}
+{"_e":"metro:bundling:progress","_t":1790536193038,"id":"4","progress":0.04000000000000001,"total":3,"current":2}
+{"_e":"metro:bundling:progress","_t":1790536193147,"id":"4","progress":0.08163265306122448,"total":14,"current":4}
+{"_e":"metro:bundling:progress","_t":1790536193579,"id":"4","progress":0.12755102040816327,"total":14,"current":5}
+{"_e":"metro:bundling:progress","_t":1790536195141,"id":"4","progress":0.18367346938775508,"total":14,"current":6}
+{"_e":"metro:bundling:progress","_t":1790536195243,"id":"4","progress":0.18367346938775508,"total":23,"current":9}
+{"_e":"metro:bundling:progress","_t":1790536195343,"id":"4","progress":0.18367346938775508,"total":29,"current":11}
+{"_e":"metro:bundling:progress","_t":1790536195447,"id":"4","progress":0.18367346938775508,"total":54,"current":18}
+{"_e":"metro:bundling:progress","_t":1790536195558,"id":"4","progress":0.18367346938775508,"total":59,"current":22}
+{"_e":"metro:bundling:progress","_t":1790536195793,"id":"4","progress":0.18367346938775508,"total":69,"current":28}
+{"_e":"metro:bundling:progress","_t":1790536195897,"id":"4","progress":0.18367346938775508,"total":169,"current":41}
+{"_e":"metro:bundling:progress","_t":1790536195997,"id":"4","progress":0.18367346938775508,"total":173,"current":52}
+{"_e":"metro:bundling:progress","_t":1790536196100,"id":"4","progress":0.18367346938775508,"total":185,"current":56}
+{"_e":"metro:bundling:progress","_t":1790536196172,"id":"4","progress":0.18367346938775508,"total":185,"current":57}
+{"_e":"metro:bundling:progress","_t":1790536196647,"id":"4","progress":0.18367346938775508,"total":185,"current":58}
+{"_e":"metro:bundling:progress","_t":1790536196808,"id":"4","progress":0.18367346938775508,"total":191,"current":67}
+{"_e":"metro:bundling:progress","_t":1790536196910,"id":"4","progress":0.18367346938775508,"total":199,"current":73}
+{"_e":"metro:bundling:progress","_t":1790536197011,"id":"4","progress":0.18367346938775508,"total":206,"current":79}
+{"_e":"metro:bundling:progress","_t":1790536197116,"id":"4","progress":0.18367346938775508,"total":220,"current":85}
+{"_e":"metro:bundling:progress","_t":1790536197235,"id":"4","progress":0.18367346938775508,"total":229,"current":90}
+{"_e":"metro:bundling:progress","_t":1790536197392,"id":"4","progress":0.18367346938775508,"total":229,"current":91}
+{"_e":"metro:bundling:progress","_t":1790536197526,"id":"4","progress":0.1847170665459484,"total":235,"current":101}
+{"_e":"metro:bundling:progress","_t":1790536197625,"id":"4","progress":0.19955993012631013,"total":244,"current":109}
+{"_e":"metro:bundling:progress","_t":1790536197726,"id":"4","progress":0.22185465238395294,"total":276,"current":130}
+{"_e":"metro:bundling:progress","_t":1790536197827,"id":"4","progress":0.2534601664684899,"total":290,"current":146}
+{"_e":"metro:bundling:progress","_t":1790536197927,"id":"4","progress":0.2910318559556787,"total":304,"current":164}
+{"_e":"metro:bundling:progress","_t":1790536198027,"id":"4","progress":0.32340842511406664,"total":313,"current":178}
+{"_e":"metro:bundling:progress","_t":1790536198129,"id":"4","progress":0.33062499999999995,"total":320,"current":184}
+{"_e":"metro:bundling:progress","_t":1790536198231,"id":"4","progress":0.3891928288864574,"total":327,"current":204}
+{"_e":"metro:bundling:progress","_t":1790536198343,"id":"4","progress":0.39153927704250885,"total":342,"current":214}
+{"_e":"metro:bundling:progress","_t":1790536198450,"id":"4","progress":0.43582064074611465,"total":359,"current":237}
+{"_e":"metro:bundling:progress","_t":1790536198555,"id":"4","progress":0.4491104958745649,"total":382,"current":256}
+{"_e":"metro:bundling:progress","_t":1790536198656,"id":"4","progress":0.4491104958745649,"total":401,"current":264}
+{"_e":"metro:bundling:progress","_t":1790536198757,"id":"4","progress":0.4491104958745649,"total":421,"current":282}
+{"_e":"metro:bundling:progress","_t":1790536198856,"id":"4","progress":0.4684783135319039,"total":431,"current":295}
+{"_e":"metro:bundling:progress","_t":1790536198966,"id":"4","progress":0.4684783135319039,"total":445,"current":300}
+{"_e":"metro:bundling:progress","_t":1790536199073,"id":"4","progress":0.4694224708826407,"total":451,"current":309}
+{"_e":"metro:bundling:progress","_t":1790536199184,"id":"4","progress":0.4694224708826407,"total":457,"current":310}
+{"_e":"metro:bundling:progress","_t":1790536199225,"id":"4","progress":0.4694224708826407,"total":457,"current":311}
+{"_e":"metro:bundling:progress","_t":1790536199328,"id":"4","progress":0.4694224708826407,"total":480,"current":318}
+{"_e":"metro:bundling:progress","_t":1790536199428,"id":"4","progress":0.4694224708826407,"total":493,"current":325}
+{"_e":"metro:bundling:progress","_t":1790536199528,"id":"4","progress":0.4694224708826407,"total":493,"current":331}
+{"_e":"metro:bundling:progress","_t":1790536199628,"id":"4","progress":0.4694224708826407,"total":499,"current":338}
+{"_e":"metro:bundling:progress","_t":1790536199731,"id":"4","progress":0.47886399999999996,"total":500,"current":346}
+{"_e":"metro:bundling:progress","_t":1790536199832,"id":"4","progress":0.5106058962117923,"total":508,"current":363}
+{"_e":"metro:bundling:progress","_t":1790536199951,"id":"4","progress":0.553000333178871,"total":511,"current":380}
+{"_e":"metro:bundling:progress","_t":1790536200065,"id":"4","progress":0.5653883136094674,"total":520,"current":391}
+{"_e":"metro:bundling:progress","_t":1790536200165,"id":"4","progress":0.588358729338843,"total":528,"current":405}
+{"_e":"metro:bundling:progress","_t":1790536200266,"id":"4","progress":0.6262401775114478,"total":532,"current":421}
+{"_e":"metro:bundling:progress","_t":1790536200365,"id":"4","progress":0.6573328606193701,"total":539,"current":437}
+{"_e":"metro:bundling:progress","_t":1790536200465,"id":"4","progress":0.6771285794038752,"total":542,"current":446}
+{"_e":"metro:bundling:progress","_t":1790536200570,"id":"4","progress":0.6969952024240383,"total":545,"current":455}
+{"_e":"metro:bundling:progress","_t":1790536200677,"id":"4","progress":0.6969952024240383,"total":590,"current":484}
+{"_e":"metro:bundling:progress","_t":1790536200780,"id":"4","progress":0.6985965693918467,"total":603,"current":504}
+{"_e":"metro:bundling:progress","_t":1790536200880,"id":"4","progress":0.7362927756148058,"total":613,"current":526}
+{"_e":"metro:bundling:progress","_t":1790536200981,"id":"4","progress":0.7362927756148058,"total":627,"current":537}
+{"_e":"metro:bundling:progress","_t":1790536201086,"id":"4","progress":0.7362927756148058,"total":627,"current":538}
+{"_e":"metro:bundling:progress","_t":1790536201197,"id":"4","progress":0.7472458149869382,"total":627,"current":542}
+{"_e":"metro:bundling:progress","_t":1790536201296,"id":"4","progress":0.7476190717676173,"total":628,"current":543}
+{"_e":"metro:bundling:progress","_t":1790536201321,"id":"4","progress":0.7503752687735812,"total":628,"current":544}
+{"_e":"metro:bundling:progress","_t":1790536201424,"id":"4","progress":0.7625471136679229,"total":639,"current":558}
+{"_e":"metro:bundling:progress","_t":1790536201524,"id":"4","progress":0.7809626825310979,"total":645,"current":570}
+{"_e":"metro:bundling:progress","_t":1790536201625,"id":"4","progress":0.8001220435990236,"total":654,"current":585}
+{"_e":"metro:bundling:progress","_t":1790536201726,"id":"4","progress":0.8121899280309678,"total":658,"current":593}
+{"_e":"metro:bundling:progress","_t":1790536201828,"id":"4","progress":0.8254553382978675,"total":667,"current":606}
+{"_e":"metro:bundling:progress","_t":1790536201929,"id":"4","progress":0.8427841977962913,"total":671,"current":616}
+{"_e":"metro:bundling:progress","_t":1790536202029,"id":"4","progress":0.8449955904010903,"total":681,"current":626}
+{"_e":"metro:bundling:progress","_t":1790536202129,"id":"4","progress":0.8700198351629561,"total":684,"current":638}
+{"_e":"metro:bundling:progress","_t":1790536202235,"id":"4","progress":0.8768752714758261,"total":692,"current":648}
+{"_e":"metro:bundling:progress","_t":1790536202335,"id":"4","progress":0.8934880283035322,"total":694,"current":656}
+{"_e":"metro:bundling:progress","_t":1790536202435,"id":"4","progress":0.9133897959183674,"total":700,"current":669}
+{"_e":"metro:bundling:progress","_t":1790536202536,"id":"4","progress":0.9277018513911516,"total":706,"current":680}
+{"_e":"metro:bundling:progress","_t":1790536202638,"id":"4","progress":0.9581344829026759,"total":709,"current":694}
+{"_e":"metro:bundling:progress","_t":1790536202737,"id":"4","progress":0.9831463691685184,"total":709,"current":703}
+{"_e":"metro:bundling:progress","_t":1790536202842,"id":"4","progress":0.991567149375124,"total":710,"current":707}
+{"_e":"metro:bundling:progress","_t":1790536202950,"id":"4","progress":0.9943741321166435,"total":710,"current":708}
+{"_e":"metro:bundling:progress","_t":1790536204204,"id":"4","progress":0.9971850823249355,"total":710,"current":709}
+{"_e":"metro:bundling:progress","_t":1790536204310,"id":"4","progress":0.9971850823249355,"total":713,"current":711}
+{"_e":"metro:bundling:progress","_t":1790536204434,"id":"4","progress":0.9971969179867379,"total":713,"current":712}
+{"_e":"metro:bundling:progress","_t":1790536204555,"id":"4","progress":0.999,"total":713,"current":713}
+{"_e":"metro:bundling:progress","_t":1790536204657,"id":"4","progress":0.999,"total":722,"current":715}
+{"_e":"metro:bundling:progress","_t":1790536204786,"id":"4","progress":0.999,"total":724,"current":724}
+{"_e":"metro:bundling:done","_t":1790536205358,"id":"4","total":724,"ms":17227.5386}
+{"_e":"metro:client_log","_t":1790536209064,"level":"warn","data":["SafeAreaView has been deprecated and will be removed in a future release. Please use 'react-native-safe-area-context' instead. See https://github.com/AppAndFlow/react-native-safe-area-context"]}
+{"_e":"metro:client_log","_t":1790536261762,"level":"warn","data":["[API Network Error on /auth/login]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536261795,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536261795,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536266952,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536267043,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536270673,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536270744,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536310110,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536310689,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:bundling:started","_t":1790536316333,"id":"f","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790536316333,"id":"f","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790536316404,"id":"f","total":1,"ms":70.778}
+{"_e":"metro:client_log","_t":1790536318771,"level":"warn","data":["SafeAreaView has been deprecated and will be removed in a future release. Please use 'react-native-safe-area-context' instead. See https://github.com/AppAndFlow/react-native-safe-area-context"]}
+{"_e":"metro:client_log","_t":1790536347611,"level":"warn","data":["[API Network Error on /auth/login]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536347611,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790536347628,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"root:init","_t":1790538376827,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790538376828,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790538376832,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790538377726,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790538378434,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790538378966,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790538399040,"atlas":false,"workers":10,"host":"::","port":8082}
+{"_e":"root:init","_t":1790566874380,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790566874381,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790566874386,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790566875400,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790566876149,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790566878290,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790566889550,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790566910921,"id":"2","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790566910922,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790566910929,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790566911038,"id":"2","progress":0.04938271604938271,"total":45,"current":10}
+{"_e":"metro:bundling:progress","_t":1790566911138,"id":"2","progress":0.08766892419088045,"total":179,"current":53}
+{"_e":"metro:bundling:progress","_t":1790566911245,"id":"2","progress":0.2777574872169466,"total":296,"current":156}
+{"_e":"metro:bundling:progress","_t":1790566911345,"id":"2","progress":0.3694732795078815,"total":357,"current":217}
+{"_e":"metro:bundling:progress","_t":1790566911452,"id":"2","progress":0.4525619834710744,"total":440,"current":296}
+{"_e":"metro:bundling:progress","_t":1790566911552,"id":"2","progress":0.6099480909773922,"total":484,"current":378}
+{"_e":"metro:bundling:progress","_t":1790566911655,"id":"2","progress":0.70572948570877,"total":519,"current":436}
+{"_e":"metro:bundling:progress","_t":1790566911755,"id":"2","progress":0.8008952951060702,"total":552,"current":494}
+{"_e":"metro:bundling:progress","_t":1790566911855,"id":"2","progress":0.8008952951060702,"total":594,"current":518}
+{"_e":"metro:bundling:progress","_t":1790566911957,"id":"2","progress":0.8008952951060702,"total":611,"current":526}
+{"_e":"metro:bundling:progress","_t":1790566912024,"id":"2","progress":0.8008952951060702,"total":611,"current":527}
+{"_e":"metro:bundling:progress","_t":1790566912131,"id":"2","progress":0.8143961927424153,"total":656,"current":592}
+{"_e":"metro:bundling:progress","_t":1790566912230,"id":"2","progress":0.8856500831813222,"total":679,"current":639}
+{"_e":"metro:bundling:progress","_t":1790566912330,"id":"2","progress":0.9770781253892982,"total":694,"current":686}
+{"_e":"metro:bundling:progress","_t":1790566912430,"id":"2","progress":0.9886846738091645,"total":705,"current":701}
+{"_e":"metro:bundling:progress","_t":1790566912535,"id":"2","progress":0.9971691450858285,"total":706,"current":705}
+{"_e":"metro:bundling:progress","_t":1790566912641,"id":"2","progress":0.999,"total":706,"current":706}
+{"_e":"metro:bundling:progress","_t":1790566912752,"id":"2","progress":0.999,"total":719,"current":706}
+{"_e":"metro:bundling:progress","_t":1790566912781,"id":"2","progress":0.999,"total":719,"current":707}
+{"_e":"metro:bundling:progress","_t":1790566912892,"id":"2","progress":0.999,"total":724,"current":709}
+{"_e":"metro:bundling:progress","_t":1790566913183,"id":"2","progress":0.999,"total":724,"current":710}
+{"_e":"metro:bundling:progress","_t":1790566913294,"id":"2","progress":0.999,"total":728,"current":710}
+{"_e":"metro:bundling:progress","_t":1790566913622,"id":"2","progress":0.999,"total":728,"current":711}
+{"_e":"metro:bundling:progress","_t":1790566913722,"id":"2","progress":0.999,"total":731,"current":714}
+{"_e":"metro:bundling:progress","_t":1790566913835,"id":"2","progress":0.999,"total":732,"current":717}
+{"_e":"metro:bundling:progress","_t":1790566913958,"id":"2","progress":0.999,"total":738,"current":725}
+{"_e":"metro:bundling:progress","_t":1790566914058,"id":"2","progress":0.999,"total":739,"current":730}
+{"_e":"metro:bundling:progress","_t":1790566914733,"id":"2","progress":0.999,"total":739,"current":731}
+{"_e":"metro:bundling:progress","_t":1790566914833,"id":"2","progress":0.999,"total":740,"current":732}
+{"_e":"metro:bundling:progress","_t":1790566914955,"id":"2","progress":0.999,"total":744,"current":736}
+{"_e":"metro:bundling:progress","_t":1790566915068,"id":"2","progress":0.999,"total":744,"current":739}
+{"_e":"metro:bundling:progress","_t":1790566915169,"id":"2","progress":0.999,"total":744,"current":741}
+{"_e":"metro:bundling:progress","_t":1790566915411,"id":"2","progress":0.999,"total":744,"current":742}
+{"_e":"metro:bundling:progress","_t":1790566915515,"id":"2","progress":0.999,"total":746,"current":744}
+{"_e":"metro:bundling:progress","_t":1790566915626,"id":"2","progress":0.999,"total":755,"current":752}
+{"_e":"metro:bundling:done","_t":1790566915727,"id":"2","total":755,"ms":4805.7903}
+{"_e":"metro:client_log","_t":1790566946920,"level":"warn","data":["[API Network Error on /auth/login]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790566947258,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790566947316,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790566966746,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790566966799,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567004564,"level":"warn","data":["[API Network Error on /lots]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567011277,"level":"warn","data":["[API Network Error on /lots]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567034427,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567034485,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567035557,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567035605,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567036877,"level":"warn","data":["[API Network Error on /users/me/earnings]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}
+{"_e":"metro:client_log","_t":1790567036946,"level":"warn","data":["[API Network Error on /prices/current]:","fetch failed: java.net.ConnectException: Failed to connect to localhost/127.0.0.1:5000"]}

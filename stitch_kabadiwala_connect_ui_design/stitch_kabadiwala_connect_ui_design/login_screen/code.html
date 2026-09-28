@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>लॉगिन - Kabadiwala Connect</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#102000",
+            "primary-container": "#14532d",
+            "on-secondary-container": "#007230",
+            "tertiary-fixed-dim": "#91db2a",
+            "surface-variant": "#e2e3de",
+            "on-tertiary-fixed-variant": "#304f00",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#edeee9",
+            "surface-container-highest": "#e2e3de",
+            "outline-variant": "#c0c9be",
+            "on-surface-variant": "#404941",
+            "on-primary-fixed": "#00210d",
+            "primary": "#003b1b",
+            "error": "#ba1a1a",
+            "outline": "#717970",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f0f1ec",
+            "secondary-fixed": "#7ffc97",
+            "secondary": "#006e2d",
+            "tertiary": "#203800",
+            "background": "#f9faf5",
+            "primary-fixed-dim": "#96d5a3",
+            "tertiary-container": "#315100",
+            "on-primary": "#ffffff",
+            "surface-dim": "#d9dad6",
+            "surface": "#f9faf5",
+            "on-background": "#1a1c19",
+            "surface-bright": "#f9faf5",
+            "on-primary-fixed-variant": "#12512c",
+            "surface-container-high": "#e7e9e4",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#83cb14",
+            "inverse-surface": "#2e312e",
+            "on-secondary-fixed-variant": "#005320",
+            "secondary-fixed-dim": "#62df7d",
+            "inverse-primary": "#96d5a3",
+            "secondary-container": "#7cf994",
+            "on-surface": "#1a1c19",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f4ef",
+            "on-primary-container": "#87c695",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#002109",
+            "tertiary-fixed": "#acf847",
+            "surface-tint": "#2e6a41",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#b1f2be"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem",
+            "margin": "1.25rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.375rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-xl": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-xl": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "numeric-xl": ["48px", { "lineHeight": "56px", "fontWeight": "800" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "numeric-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex justify-center items-center p-0 md:p-6 select-none">
+<!-- Mobile Viewport Container (390px canonical width) -->
+<div class="w-full max-w-[390px] min-h-screen md:min-h-[820px] md:h-[844px] bg-surface flex flex-col justify-between overflow-y-auto relative shadow-2xl md:rounded-3xl border border-surface-variant/40">
+<!-- Top Navigation Bar (Linear authentication journey - shell nav suppressed) -->
+<header class="w-full px-margin pt-space-md pb-space-xs flex items-center justify-between z-10">
+<button aria-label="वापस जाएं" class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-lowest border border-outline-variant/50 text-on-surface active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">recycling</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight text-[15px]">Kabadiwala Connect</span>
+</div>
+<!-- Language selector pill for low-literacy users -->
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm" type="button">
+<span class="font-semibold text-primary">अ/A</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="px-margin flex-1 flex flex-col justify-center py-space-sm">
+<!-- Brand Icon & Welcoming Header -->
+<div class="mb-space-lg text-left">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary-container/50 border border-secondary/20 mb-space-sm text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[36px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">recycling</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-extrabold flex items-center gap-2">
+          स्वागत है 👋
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+          अपने कबाड़ीवाला Connect खाते में प्रवेश करें
+        </p>
+</div>
+<!-- Login Form Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-md border border-outline-variant/60 shadow-sm space-y-space-md">
+<!-- Mobile Input Group -->
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-on-surface font-bold" for="mobile-number">
+            📱 मोबाइल नंबर
+          </label>
+<div class="flex items-center bg-surface-container-lowest rounded-xl border-2 border-outline-variant focus-within:border-secondary transition-colors h-[58px] px-3.5 gap-2.5">
+<!-- Indian Flag & Prefix -->
+<div class="flex items-center gap-1.5 pr-2.5 border-r border-surface-variant flex-shrink-0 select-none">
+<span aria-label="भारत" class="text-lg leading-none" role="img">🇮🇳</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">+91</span>
+</div>
+<!-- Number Input Field -->
+<input class="w-full bg-transparent border-0 p-0 font-numeric-lg text-numeric-lg text-on-surface placeholder:text-outline/40 focus:ring-0 focus:outline-none tracking-wider text-[22px] font-semibold" id="mobile-number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="98765 43210" required="" type="tel"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 pl-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">sms</span> 
+            हम सत्यापन के लिए 4 अंकों का OTP भेजेंगे
+          </p>
+</div>
+<!-- Primary Action Button (Send OTP) -->
+<button class="w-full min-h-[54px] h-[54px] bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all hover:bg-primary" type="button">
+<span>OTP भेजें</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</section>
+<!-- Alternative / Demo Access Divider -->
+<div class="relative my-space-md flex items-center justify-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/60"></div>
+</div>
+<div class="relative bg-surface px-4 text-center">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">या</span>
+</div>
+</div>
+<!-- Quick Demo Login Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm border border-outline-variant/60 shadow-sm active:scale-[0.98] transition-transform cursor-pointer hover:border-secondary/50">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold text-[11px] mb-0.5">
+              1-टैप डेमो लॉगिन
+            </span>
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">
+              डेमो अकाउंट से देखें
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] truncate">
+              रमेश (कबाड़ संग्रहकर्ता / Scrap Collector)
+            </p>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">chevron_right</span>
+</div>
+</div>
+</main>
+<!-- Trust Indicator & Registration Footer -->
+<footer class="px-margin pt-space-xs pb-space-lg space-y-space-sm text-center">
+<!-- Trust Guarantee Badge -->
+<div class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm">
+          आपकी जानकारी पूरी तरह सुरक्षित है
+        </span>
+</div>
+<!-- Register Link -->
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          खाता नहीं है? 
+          <a class="font-label-md text-label-md font-bold text-secondary hover:underline ml-1" href="#">
+            नया खाता बनाएं
+          </a>
+</p>
+</div>
+<!-- Government/Municipal Partnership Tagline -->
+<p class="font-label-sm text-label-sm text-outline text-[11px]">
+        मान्यता प्राप्त ई-कचरा व पुनर्चक्रण मंच • भारत सरकार अधिकृत
+      </p>
+</footer>
+</div>
+</body></html>

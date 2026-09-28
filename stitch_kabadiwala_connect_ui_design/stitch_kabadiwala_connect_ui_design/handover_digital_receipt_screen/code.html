@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabadiwala Connect - Handover &amp; Digital Receipt</title>
+<!-- Material Symbols Outlined Font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#315100",
+            "surface-dim": "#d9dad6",
+            "surface-tint": "#2e6a41",
+            "tertiary-fixed-dim": "#91db2a",
+            "surface-container-high": "#e7e9e4",
+            "on-tertiary-fixed-variant": "#304f00",
+            "outline": "#717970",
+            "primary-fixed-dim": "#96d5a3",
+            "secondary": "#006e2d",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#404941",
+            "on-primary-fixed-variant": "#12512c",
+            "primary": "#003b1b",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#96d5a3",
+            "on-tertiary-container": "#83cb14",
+            "secondary-fixed-dim": "#62df7d",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e2e3de",
+            "surface-container-low": "#f3f4ef",
+            "on-secondary-fixed": "#002109",
+            "on-error": "#ffffff",
+            "background": "#f9faf5",
+            "surface-variant": "#e2e3de",
+            "primary-fixed": "#b1f2be",
+            "tertiary-fixed": "#acf847",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#005320",
+            "on-secondary-container": "#007230",
+            "surface-bright": "#f9faf5",
+            "on-primary-fixed": "#00210d",
+            "inverse-surface": "#2e312e",
+            "on-primary-container": "#87c695",
+            "secondary-container": "#7cf994",
+            "on-tertiary-fixed": "#102000",
+            "secondary-fixed": "#7ffc97",
+            "inverse-on-surface": "#f0f1ec",
+            "surface-container": "#edeee9",
+            "tertiary": "#203800",
+            "surface": "#f9faf5",
+            "on-background": "#1a1c19",
+            "outline-variant": "#c0c9be",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-container": "#14532d",
+            "on-surface": "#1a1c19"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.375rem",
+            "margin": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem"
+          },
+          "fontFamily": {
+            "headline-lg": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "numeric-xl": [
+              "\"Inter, sans-serif\""
+            ],
+            "numeric-lg": [
+              "\"Inter, sans-serif\""
+            ],
+            "body-sm": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "body-lg": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "headline-xl": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "headline-sm": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "label-md": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "label-sm": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "body-md": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "label-lg": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ],
+            "headline-md": [
+              "\"Inter, Noto Sans Devanagari, sans-serif\""
+            ]
+          },
+          "fontSize": {
+            "headline-lg": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "fontWeight": "700"
+              }
+            ],
+            "numeric-xl": [
+              "48px",
+              {
+                "lineHeight": "56px",
+                "fontWeight": "800"
+              }
+            ],
+            "numeric-lg": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "26px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-xl": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-sm": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "14px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "600"
+              }
+            ],
+            "label-sm": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-lg": [
+              "16px",
+              {
+                "lineHeight": "22px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-md": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes subtle-pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.25;
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: 0.08;
+      }
+    }
+    .pulse-ring {
+      animation: subtle-pulse 2.4s ease-in-out infinite;
+    }
+    .ticket-edge-left, .ticket-edge-right {
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: #f9faf5;
+      border-radius: 9999px;
+      transform: translateY(-50%);
+    }
+    .ticket-edge-left { left: -9px; }
+    .ticket-edge-right { right: -9px; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Frame Container (Max 390px canonical width) -->
+<div class="w-full max-w-[390px] min-h-screen bg-background flex flex-col relative pb-24 shadow-sm border-x border-surface-variant">
+<!-- TopAppBar from Shared Components JSON -->
+<header class="flex justify-between items-center w-full px-margin py-space-sm h-14 bg-surface dark:bg-surface-dim docked full-width top-0 z-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary text-2xl" data-icon="location_on">location_on</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed tracking-tight">Kabadiwala Connect</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-sm border border-outline-variant" title="Collector profile avatar">
+<span class="material-symbols-outlined text-lg" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin pt-4 pb-6 space-y-4">
+<!-- Top Success Confirmation Section -->
+<section class="flex flex-col items-center text-center pt-2">
+<div class="relative flex items-center justify-center w-24 h-24 mb-3">
+<!-- Soft pulsing ring -->
+<div class="absolute inset-0 rounded-full bg-secondary-container pulse-ring"></div>
+<div class="relative w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-sm border-2 border-primary-fixed">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="space-y-1">
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">हैंडओवर सफल रहा!</h1>
+<p class="text-label-md font-label-md text-secondary">Handover Completed &amp; Verified</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">आपका transaction सुरक्षित रूप से दर्ज हो गया है</p>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-outline text-label-sm font-label-sm mt-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span>27 Sep 2026 • 5:42 PM</span>
+</div>
+</div>
+</section>
+<!-- Handover Reference Identifier Badge -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex flex-col text-left">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Handover Reference</span>
+<span class="text-label-lg font-label-lg text-primary font-mono font-bold tracking-wider">KCH-2026-000124</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-transform duration-150 border border-outline-variant text-primary text-label-sm font-label-md" id="copyBtn" onclick="navigator.clipboard?.writeText('KCH-2026-000124'); const el = document.getElementById('copyBtnText'); el.innerText='कॉपी हो गया!'; setTimeout(() =&gt; el.innerText='कॉपी करें', 2000);">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span>
+<span id="copyBtnText">कॉपी करें</span>
+</button>
+</section>
+<!-- Digital Receipt Card (Ticket Style with Notch & Perforation) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-2xl relative shadow-sm overflow-hidden">
+<!-- Ticket Header -->
+<div class="bg-primary text-on-primary p-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed block">Official Recycler Slip</span>
+<h2 class="text-headline-sm font-headline-sm text-on-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg" data-icon="receipt_long">receipt_long</span>
+              डिजिटल रसीद
+            </h2>
+</div>
+<div class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>वैध (Valid)</span>
+</div>
+</div>
+<!-- Receipt Body Top: Key Financials & Lot -->
+<div class="p-4 space-y-3.5">
+<!-- Lot ID and Status -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Lot ID / लॉट संख्या</span>
+<span class="text-label-lg font-label-lg font-bold text-on-surface font-mono">KC-2026-00124</span>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Status / स्थिति</span>
+<span class="text-label-md font-label-md font-bold text-secondary inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Completed &amp; Verified
+              </span>
+</div>
+</div>
+<!-- Material Category -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="memory">memory</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Material / सामग्री प्रकार</span>
+<span class="text-label-lg font-label-lg text-on-surface">Printed Circuit Board (PCB)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">High-Yield E-Waste</span>
+</div>
+<!-- Weight & Rate Breakdown -->
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Final Weight</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">12.5 KG</span>
+<span class="text-label-sm font-label-sm text-secondary block">सत्यापित वजन (Scale GPS)</span>
+</div>
+<div class="border-l border-outline-variant pl-3">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Unit Rate</span>
+<span class="text-label-lg font-label-lg text-on-surface font-semibold">₹284.80 <span class="text-label-sm font-normal text-on-surface-variant">/ KG</span></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Standard CPCB Base</span>
+</div>
+</div>
+<!-- Total Payout Banner -->
+<div class="p-3.5 rounded-xl bg-secondary-container/30 border border-secondary/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-secondary font-bold uppercase tracking-wider block">Final Amount / कुल भुगतान</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">नकद भुगतान प्राप्त</span>
+</div>
+<div class="text-right">
+<span class="text-numeric-lg font-numeric-lg text-primary block leading-none">₹3,560</span>
+</div>
+</div>
+</div>
+<!-- Perforated Tear Line with Notches -->
+<div class="relative flex items-center justify-center my-1">
+<div class="ticket-edge-left border-r border-outline-variant"></div>
+<div class="w-full border-t-2 border-dashed border-outline-variant mx-4"></div>
+<div class="ticket-edge-right border-l border-outline-variant"></div>
+</div>
+<!-- Receipt Body Bottom: Recycler & Location Info -->
+<div class="p-4 space-y-3 bg-surface-container-lowest">
+<!-- Recycler Entity -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5" data-icon="domain">domain</span>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Authorized Recycler</span>
+<span class="text-label-md font-label-md text-on-surface font-bold block">Green E-Recyclers Pvt Ltd</span>
+<span class="text-label-sm font-label-sm text-outline font-mono block">GPCB Reg: #8921 • EPR Authorized</span>
+</div>
+</div>
+<!-- Handover Location -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5" data-icon="pin_drop">pin_drop</span>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Handover Location</span>
+<span class="text-body-sm font-body-sm text-on-surface block">Gorakhpur Industrial Area, Yard 4</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+                GPS Verified Lat: 26.7606° N, 83.3732° E
+              </span>
+</div>
+</div>
+<!-- Payment Mode -->
+<div class="flex items-center justify-between pt-2 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="payments">payments</span>
+<span class="text-label-md font-label-md text-on-surface">Payment Mode / भुगतान प्रकार</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-container/40 text-on-secondary-container text-label-sm font-label-md font-bold">
+              💵 Cash Paid (नकद भुगतान)
+            </span>
+</div>
+</div>
+</section>
+<!-- Verification & Trust Badge -->
+<section class="bg-surface-container-low border border-outline-variant rounded-2xl p-4 space-y-2.5">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-xl text-primary" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-label-md font-label-md">CPCB / State Pollution Control Board Tracked</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">
+          यह डिजिटल रसीद भारत सरकार के ई-कचरा प्रबंधन नियम 2022 (E-Waste Management Rules 2022) के तहत प्रमाणित है।
+        </p>
+<div class="grid grid-cols-1 gap-1.5 pt-1 text-label-sm font-label-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Recycler Confirmed (प्राधिकृत रीसायकलर पुष्टि)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Geo-location Tagged (सत्यापित स्थान कोड)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Weight Slip Attached (डिजिटल कांटा पर्ची संलग्न)</span>
+</div>
+</div>
+</section>
+<!-- Environmental Impact Card -->
+<section class="bg-primary-container text-on-primary rounded-2xl p-4 space-y-2 relative overflow-hidden shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center flex-shrink-0 text-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="eco" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-label-lg font-label-lg text-primary-fixed font-bold leading-tight">
+              ♻️ बधाई! आपने 12.5 KG ई-कचरे को सुरक्षित रीसाइक्लिंग में पहुंचाया।
+            </h3>
+<p class="text-body-sm font-body-sm text-on-primary-container">
+              पर्यावरण और कामगार स्वास्थ्य की सुरक्षा में आपका योगदान। ज़हरीले लेड और पारे (Mercury) को भूमि में मिलने से रोका गया।
+            </p>
+</div>
+</div>
+</section>
+<!-- Primary & Secondary Actions -->
+<section class="space-y-2.5 pt-2">
+<!-- Primary Action: Share / Download Receipt (Deep Forest Green, 52px height) -->
+<button class="w-full min-h-[52px] bg-primary-container hover:bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform duration-150 border border-primary-fixed/20">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+<span>रसीद शेयर करें / डाउनलोड करें (Share Receipt)</span>
+</button>
+<!-- Secondary Action: Back to Home (White card with green border) -->
+<button class="w-full min-h-[48px] bg-surface-container-lowest hover:bg-surface-container text-primary border-2 border-primary-container rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span>होम पर वापस जाएं (Back to Home)</span>
+</button>
+</section>
+<!-- Safety Reassurance Disclaimer -->
+<div class="text-center py-2">
+<p class="text-label-sm font-label-sm text-outline flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="lock">lock</span>
+          256-Bit SSL Encrypted Record • Transaction Verified
+        </p>
+</div>
+</main>
+<!-- BottomNavBar from Shared Components JSON -->
+<!-- Destination count: 4, label_texts: ["Home", "My Lots", "Earnings", "Profile"] -->
+<!-- Active State Logic: Handover + Digital Receipt corresponds to "My Lots" as it's the verified settlement of scrap lots -->
+<nav class="fixed bottom-0 w-full max-w-[390px] z-50 flex justify-around items-center px-gutter py-space-xs min-h-[64px] bg-surface-container-lowest dark:bg-surface-container-low border-t border-surface-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+<!-- Nav Item 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container dark:hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="recycling">recycling</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<!-- Nav Item 2: My Lots (Active - Represents the current transaction lot lifecycle state) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-xl px-space-md py-space-xs font-semibold hover:bg-surface-container dark:hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="inventory_2" data-weight="fill" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="text-label-sm font-label-sm mt-0.5">My Lots</span>
+</a>
+<!-- Nav Item 3: Earnings (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container dark:hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="payments">payments</span>
+<span class="text-label-sm font-label-sm mt-0.5">Earnings</span>
+</a>
+<!-- Nav Item 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container dark:hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

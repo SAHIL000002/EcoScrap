@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabadiwala Connect - Home Dashboard</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter & Noto Sans Devanagari typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#102000",
+            "primary-container": "#14532d",
+            "on-secondary-container": "#007230",
+            "tertiary-fixed-dim": "#91db2a",
+            "surface-variant": "#e2e3de",
+            "on-tertiary-fixed-variant": "#304f00",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#edeee9",
+            "surface-container-highest": "#e2e3de",
+            "outline-variant": "#c0c9be",
+            "on-surface-variant": "#404941",
+            "on-primary-fixed": "#00210d",
+            "primary": "#003b1b",
+            "error": "#ba1a1a",
+            "outline": "#717970",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f0f1ec",
+            "secondary-fixed": "#7ffc97",
+            "secondary": "#006e2d",
+            "tertiary": "#203800",
+            "background": "#f9faf5",
+            "primary-fixed-dim": "#96d5a3",
+            "tertiary-container": "#315100",
+            "on-primary": "#ffffff",
+            "surface-dim": "#d9dad6",
+            "surface": "#f9faf5",
+            "on-background": "#1a1c19",
+            "surface-bright": "#f9faf5",
+            "on-primary-fixed-variant": "#12512c",
+            "surface-container-high": "#e7e9e4",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#83cb14",
+            "inverse-surface": "#2e312e",
+            "on-secondary-fixed-variant": "#005320",
+            "secondary-fixed-dim": "#62df7d",
+            "inverse-primary": "#96d5a3",
+            "secondary-container": "#7cf994",
+            "on-surface": "#1a1c19",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f4ef",
+            "on-primary-container": "#87c695",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#002109",
+            "tertiary-fixed": "#acf847",
+            "surface-tint": "#2e6a41",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#b1f2be"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem",
+            "margin": "1.25rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.375rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-xl": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-xl": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "numeric-xl": ["48px", { "lineHeight": "56px", "fontWeight": "800" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "numeric-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Material Symbols base support */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Hide scrollbars smoothly for horizontal slider */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-high text-on-surface antialiased flex justify-center items-start min-h-screen">
+<!-- Mobile Frame Container (Strictly 390px Android Viewport) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface flex flex-col relative shadow-xl overflow-x-hidden border-x border-surface-variant">
+<!-- 0. Android Status Bar -->
+<div class="w-full bg-surface text-on-surface px-margin pt-2.5 pb-1 flex justify-between items-center select-none text-[13px] font-semibold tracking-tight z-40">
+<span class="tracking-normal font-medium">10:42</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[17px]">network_wifi</span>
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar / Brand Header (From Shared Component JSON) -->
+<header class="flex justify-between items-center w-full px-margin py-space-sm h-14 bg-surface text-primary select-none">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[24px]">location_on</span>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">Kabadiwala Connect</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-0.5">
+            Gorakhpur, UP <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</span>
+</div>
+</div>
+<!-- Trailing Action: Notification & Avatar -->
+<div class="flex items-center space-x-2.5">
+<div class="relative p-1.5 rounded-full hover:bg-surface-container transition-transform active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface"></span>
+</div>
+<div aria-label="Collector profile avatar" class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-label-md border border-primary-fixed-dim active:scale-95 transition-transform cursor-pointer">
+          RK
+        </div>
+</div>
+</header>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 w-full px-margin pb-28 pt-2 flex flex-col gap-5 overflow-y-auto">
+<!-- Greeting & Online Status Bar -->
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface flex items-center gap-1.5">
+            नमस्ते, Ramesh <span class="inline-block animate-pulse">👋</span>
+</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant font-medium">आज क्या बेचेंगे?</p>
+</div>
+<!-- Online/Offline Sync Pill -->
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1.5 rounded-full border border-surface-variant shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-secondary -ml-3.5"></span>
+<span class="text-label-sm font-label-sm font-semibold text-secondary ml-1">ऑनलाइन • सिंक ✓</span>
+</div>
+</div>
+<!-- 1. PRIMARY ACTION (Strongest Hero Card - Selling Scrap) -->
+<section class="relative bg-primary-container text-on-primary rounded-2xl p-5 overflow-hidden transition-transform duration-150 active:scale-[0.99] cursor-pointer shadow-md">
+<!-- Background Ambient Watermark Pattern -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 opacity-15 pointer-events-none text-white">
+<span class="material-symbols-outlined text-[130px]">recycling</span>
+</div>
+<div class="relative z-10 flex flex-col gap-3">
+<!-- Availability Badge -->
+<div class="self-start inline-flex items-center gap-1.5 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>तुरंत पिकअप उपलब्ध</span>
+</div>
+<!-- Main Call to Action Title & Text -->
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[32px]">photo_camera</span>
+<h2 class="text-headline-lg font-headline-lg text-white font-bold tracking-tight">
+                कबाड़ बेचें
+              </h2>
+</div>
+<p class="text-body-sm font-body-sm text-primary-fixed-dim leading-snug max-w-[240px]">
+              फोटो लें और तुरंत सही कीमत जानें • वजन पर तुरंत नकद
+            </p>
+</div>
+<!-- Accessible Large Tap Area Indicator Button -->
+<div class="mt-2 w-full min-h-[48px] bg-secondary-fixed text-on-secondary-fixed font-label-lg font-label-lg rounded-xl flex items-center justify-center gap-2 font-bold shadow-sm hover:brightness-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+<span>कबाड़ का फोटो खींचें</span>
+</div>
+</div>
+</section>
+<!-- 2. TODAY'S RATES SECTION (“आज के भाव”) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">आज के भाव</h3>
+</div>
+<button class="text-secondary font-label-md font-label-md flex items-center gap-0.5 hover:underline active:scale-95 transition-transform">
+<span>सभी देखें</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Horizontal Scrollable Cards -->
+<div class="flex gap-3 overflow-x-auto pb-1 pt-0.5 no-scrollbar -mx-margin px-margin">
+<!-- Card A: PCB / ई-कचरा -->
+<div class="min-w-[155px] bg-surface-container-lowest border border-surface-variant rounded-2xl p-3.5 flex flex-col justify-between shadow-sm flex-shrink-0">
+<div class="flex items-center justify-between mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<span class="bg-secondary-fixed/50 text-secondary text-label-sm font-label-sm font-bold px-1.5 py-0.5 rounded-full flex items-center">
+                ↑ 4.2%
+              </span>
+</div>
+<div>
+<p class="text-label-md font-label-md font-semibold text-on-surface truncate">PCB / ई-कचरा</p>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">₹280</span>
+<span class="text-label-sm font-label-sm text-outline">/ KG</span>
+</div>
+</div>
+</div>
+<!-- Card B: Cable / कॉपर तार -->
+<div class="min-w-[155px] bg-surface-container-lowest border border-surface-variant rounded-2xl p-3.5 flex flex-col justify-between shadow-sm flex-shrink-0">
+<div class="flex items-center justify-between mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">electrical_services</span>
+</div>
+<span class="bg-secondary-fixed/50 text-secondary text-label-sm font-label-sm font-bold px-1.5 py-0.5 rounded-full flex items-center">
+                ↑ 2.1%
+              </span>
+</div>
+<div>
+<p class="text-label-md font-label-md font-semibold text-on-surface truncate">कॉपर / केबल तार</p>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">₹160</span>
+<span class="text-label-sm font-label-sm text-outline">/ KG</span>
+</div>
+</div>
+</div>
+<!-- Card C: Battery / बैटरी -->
+<div class="min-w-[155px] bg-surface-container-lowest border border-surface-variant rounded-2xl p-3.5 flex flex-col justify-between shadow-sm flex-shrink-0">
+<div class="flex items-center justify-between mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">battery_charging_full</span>
+</div>
+<span class="bg-surface-variant text-on-surface-variant text-label-sm font-label-sm font-medium px-2 py-0.5 rounded-full flex items-center">
+                → स्थिर
+              </span>
+</div>
+<div>
+<p class="text-label-md font-label-md font-semibold text-on-surface truncate">Battery / बैटरी</p>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">₹95</span>
+<span class="text-label-sm font-label-sm text-outline">/ KG</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. EARNINGS CARD (“मेरी कमाई”) -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-3">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">मेरी कमाई</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">इस महीने का कुल भुगतान</p>
+</div>
+</div>
+<button class="text-secondary font-label-md font-label-md font-bold flex items-center gap-1 hover:underline active:scale-95 transition-transform">
+<span>हिसाब देखें</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-end justify-between pt-1">
+<div>
+<p class="text-numeric-xl font-numeric-xl text-primary tracking-tight leading-none">
+              ₹4,850
+            </p>
+<p class="text-label-sm font-label-sm text-outline mt-1 font-medium">खाते में भेजा जा चुका है</p>
+</div>
+<div class="bg-surface-container-low border border-surface-variant px-3 py-2 rounded-xl flex items-center gap-2 text-right">
+<span class="material-symbols-outlined text-outline text-[20px]">hourglass_top</span>
+<div class="text-left">
+<p class="text-[11px] font-label-sm text-outline leading-tight">बाकी (Pending)</p>
+<p class="text-headline-sm font-headline-sm font-bold text-on-surface leading-tight">₹1,200</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. NEARBY AUTHORIZED RECYCLERS (“पास के Authorized Recyclers”) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">
+              पास के Authorized Recyclers
+            </h3>
+</div>
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-bold px-2 py-0.5 rounded-full">
+            2 उपलबध
+          </span>
+</div>
+<!-- Recycler Cards Stack -->
+<div class="flex flex-col gap-2.5">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-3.5 flex flex-col gap-2.5 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface">Green E-Recyclers</h4>
+<span class="material-symbols-outlined text-secondary text-[16px] fill-1" title="Verified Recycler">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-outline">distance</span> 4.2 km दूर
+                  </span>
+<span>•</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Pickup Available
+                  </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm font-bold text-primary bg-primary-fixed/50 px-2 py-1 rounded-lg inline-block">
+                  ₹285/kg तक
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container">
+<div class="flex gap-1.5 flex-wrap">
+<span class="text-[11px] bg-surface-container-low px-2 py-0.5 rounded-md font-medium text-on-surface-variant">PCB</span>
+<span class="text-[11px] bg-surface-container-low px-2 py-0.5 rounded-md font-medium text-on-surface-variant">Cable</span>
+<span class="text-[11px] bg-surface-container-low px-2 py-0.5 rounded-md font-medium text-on-surface-variant">Battery</span>
+</div>
+<button class="min-h-[36px] px-4 bg-primary text-on-primary text-label-sm font-label-sm font-bold rounded-lg active:scale-95 transition-transform flex items-center gap-1">
+<span>देखें</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-3.5 flex flex-col gap-2.5 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface">Shreeram Eco-Tech</h4>
+<span class="material-symbols-outlined text-secondary text-[16px] fill-1" title="Authorized Recycler">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-outline">distance</span> 6.5 km दूर
+                  </span>
+<span>•</span>
+<span class="text-outline font-medium">Spot Payment</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm font-bold text-primary bg-primary-fixed/50 px-2 py-1 rounded-lg inline-block">
+                  ₹280/kg तक
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container">
+<div class="flex gap-1.5 flex-wrap">
+<span class="text-[11px] bg-surface-container-low px-2 py-0.5 rounded-md font-medium text-on-surface-variant">E-Waste &amp; Metals</span>
+</div>
+<button class="min-h-[36px] px-4 bg-surface-container-high text-on-surface text-label-sm font-label-sm font-bold rounded-lg active:scale-95 transition-transform flex items-center gap-1">
+<span>देखें</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SAFETY REMINDER CARD (Accessibility for Low-Literacy Informal Collectors) -->
+<section class="bg-[#FEF3C7] border border-[#FDE68A] rounded-2xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-[#F59E0B]/20 flex items-center justify-center text-[#B45309] flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-[#78350F] leading-snug">
+              सुरक्षित तरीके से कबाड़ संभालें
+            </h4>
+<p class="text-body-sm font-body-sm text-[#92400E] font-medium leading-tight mt-0.5">
+              Battery और CRT कांच को न तोड़ें
+            </p>
+</div>
+</div>
+<!-- Audio Guidance Button for field workers -->
+<button class="flex flex-col items-center justify-center bg-white border border-[#FDE68A] text-[#78350F] px-3 py-2 rounded-xl text-label-sm font-label-sm font-bold active:scale-95 transition-transform shadow-xs flex-shrink-0 ml-2">
+<span class="material-symbols-outlined text-[22px] text-[#B45309]">volume_up</span>
+<span>सुनें</span>
+</button>
+</section>
+</main>
+<!-- 6. FIXED BOTTOM NAVIGATION BAR (Derived verbatim from Shared Component JSON) -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 w-full max-w-[390px] z-50 flex justify-around items-center px-gutter py-space-xs min-h-[64px] bg-surface-container-lowest shadow-sm">
+<!-- 1. Home (Active semantic match) -->
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-space-md py-space-xs font-semibold active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="recycling">recycling</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</button>
+<!-- 2. My Lots (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-space-md py-space-xs rounded-xl active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+<span class="text-label-sm font-label-sm mt-0.5">My Lots</span>
+</button>
+<!-- 3. Earnings (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-space-md py-space-xs rounded-xl active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="payments">payments</span>
+<span class="text-label-sm font-label-sm mt-0.5">Earnings</span>
+</button>
+<!-- 4. Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container px-space-md py-space-xs rounded-xl active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

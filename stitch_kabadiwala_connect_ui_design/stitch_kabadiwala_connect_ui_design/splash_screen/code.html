@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabadiwala Connect - Splash</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter & Noto Sans Devanagari -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#102000",
+            "primary-container": "#14532d",
+            "on-secondary-container": "#007230",
+            "tertiary-fixed-dim": "#91db2a",
+            "surface-variant": "#e2e3de",
+            "on-tertiary-fixed-variant": "#304f00",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#edeee9",
+            "surface-container-highest": "#e2e3de",
+            "outline-variant": "#c0c9be",
+            "on-surface-variant": "#404941",
+            "on-primary-fixed": "#00210d",
+            "primary": "#003b1b",
+            "error": "#ba1a1a",
+            "outline": "#717970",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f0f1ec",
+            "secondary-fixed": "#7ffc97",
+            "secondary": "#006e2d",
+            "tertiary": "#203800",
+            "background": "#f9faf5",
+            "primary-fixed-dim": "#96d5a3",
+            "tertiary-container": "#315100",
+            "on-primary": "#ffffff",
+            "surface-dim": "#d9dad6",
+            "surface": "#f9faf5",
+            "on-background": "#1a1c19",
+            "surface-bright": "#f9faf5",
+            "on-primary-fixed-variant": "#12512c",
+            "surface-container-high": "#e7e9e4",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#83cb14",
+            "inverse-surface": "#2e312e",
+            "on-secondary-fixed-variant": "#005320",
+            "secondary-fixed-dim": "#62df7d",
+            "inverse-primary": "#96d5a3",
+            "secondary-container": "#7cf994",
+            "on-surface": "#1a1c19",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f4ef",
+            "on-primary-container": "#87c695",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#002109",
+            "tertiary-fixed": "#acf847",
+            "surface-tint": "#2e6a41",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#b1f2be"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem",
+            "margin": "1.25rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.375rem"
+          },
+          "fontFamily": {
+            "body-sm": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "numeric-xl": ["\"Inter, sans-serif\""],
+            "headline-md": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "label-lg": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "headline-xl": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "label-md": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "label-sm": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "headline-sm": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "body-md": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "headline-lg": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "body-lg": ["\"Inter, Noto Sans Devanagari, sans-serif\""],
+            "numeric-lg": ["\"Inter, sans-serif\""]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "numeric-xl": ["48px", { "lineHeight": "56px", "fontWeight": "800" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "numeric-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes pulseSoft {
+      0%, 100% { opacity: 0.35; transform: scale(0.98); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+    .animate-pulse-soft {
+      animation: pulseSoft 2.4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface h-full flex justify-center items-center p-0 m-0 antialiased select-none">
+<!-- Target resolution: Android 390px mobile viewport frame with subtle realistic elevation container -->
+<div class="w-full max-w-[390px] h-full sm:h-[844px] bg-surface flex flex-col justify-between relative overflow-hidden shadow-2xl sm:rounded-[2.5rem] border border-surface-variant">
+<!-- Android Standard Mobile Status Bar (9:41, Network, Wi-Fi, Battery) -->
+<header class="w-full h-11 pt-2 px-margin flex items-center justify-between text-on-surface font-label-md text-label-md z-20">
+<span class="font-semibold tracking-tight text-on-surface">9:41</span>
+<div class="flex items-center space-x-1.5 text-on-surface">
+<span aria-label="Cellular" class="material-symbols-outlined text-base" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span aria-label="Wi-Fi" class="material-symbols-outlined text-base" data-icon="wifi">wifi</span>
+<span aria-label="Battery" class="material-symbols-outlined text-base" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- Subtle Environmental Backdrop Graphic (Circular Economy Tonal Rings) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+<div class="w-96 h-96 rounded-full border border-secondary-fixed/40 animate-pulse-soft"></div>
+<div class="absolute w-[480px] h-[480px] rounded-full border border-outline-variant/30"></div>
+</div>
+<!-- Center Section: Brand Identity & Trust Value Proposition -->
+<main class="flex-1 flex flex-col items-center justify-center px-margin text-center z-10 -mt-6">
+<!-- Distinctive circular/loop branding icon symbolizing Recycling + Scrap + Circular Economy -->
+<div class="relative flex items-center justify-center mb-space-lg">
+<!-- Ambient Green Aura Glow -->
+<div class="absolute w-28 h-28 bg-secondary-fixed rounded-full blur-xl opacity-60"></div>
+<!-- Elevated Brand Icon Container with Dual Green Tone -->
+<div class="relative w-24 h-24 rounded-3xl bg-surface-container-lowest border-2 border-secondary-container flex items-center justify-center shadow-sm">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-4xl leading-none" data-icon="recycling" data-weight="fill" style="font-variation-settings: 'FILL' 1;">recycling</span>
+</div>
+<!-- Integrated Verified Circular Tag -->
+<div class="absolute -bottom-1.5 -right-1.5 w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center border-2 border-surface-container-lowest shadow-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-sm font-bold" data-icon="sync">sync</span>
+</div>
+</div>
+</div>
+<!-- Prominent Brand Headline -->
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-space-xs font-bold">
+        Kabadiwala Connect
+      </h1>
+<!-- Main Hindi Tagline in Noto Sans Devanagari -->
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 bg-surface-container-high rounded-full border border-outline-variant/50 mb-space-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="eco" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-wide">
+          कबाड़ से Recycling तक
+        </p>
+</div>
+<!-- Trust Subtitle: With explicit emerald dot separators for instant readability -->
+<div class="flex items-center justify-center flex-wrap gap-y-1 gap-x-2 text-on-surface-variant font-label-md text-label-md max-w-[310px] leading-relaxed">
+<span class="text-on-surface font-semibold">सही दाम</span>
+<span aria-hidden="true" class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-semibold">सही Recycler</span>
+<span aria-hidden="true" class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-semibold">सुरक्षित Recycling</span>
+</div>
+</main>
+<!-- Bottom Area: Clean Loading Indicator & Professional Technology Guarantee -->
+<footer class="w-full pb-8 pt-4 px-margin flex flex-col items-center justify-end z-10">
+<!-- Subtle Loading Dots / Progress in Deep Forest Green -->
+<div aria-label="Loading application" class="flex items-center justify-center space-x-2 mb-space-md" role="status">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-bounce" style="animation-delay: 0s;"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-bounce" style="animation-delay: 0.18s;"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-bounce" style="animation-delay: 0.36s;"></span>
+</div>
+<!-- Clean & Green Tech Subtitle for Collectors & Enterprises -->
+<div class="flex items-center space-x-1.5 text-on-surface-variant font-label-sm text-label-sm text-center">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-base" data-icon="verified_user">verified_user</span>
+<span class="font-medium text-on-surface-variant">Made for informal scrap collectors &amp; formal recyclers</span>
+</div>
+<!-- Mobile Android Gesture Pill Bar Indicator -->
+<div class="w-32 h-1 bg-outline-variant/60 rounded-full mt-4"></div>
+</footer>
+</div>
+</body></html>

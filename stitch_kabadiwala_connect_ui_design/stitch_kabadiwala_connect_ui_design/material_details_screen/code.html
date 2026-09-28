@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>कबाड़ की जानकारी - Kabadiwala Connect</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f9faf5",
+            "outline": "#717970",
+            "on-tertiary-container": "#83cb14",
+            "on-secondary-container": "#007230",
+            "primary-fixed": "#b1f2be",
+            "outline-variant": "#c0c9be",
+            "primary": "#003b1b",
+            "on-surface-variant": "#404941",
+            "secondary-fixed-dim": "#62df7d",
+            "tertiary-container": "#315100",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#91db2a",
+            "on-primary-container": "#87c695",
+            "secondary-fixed": "#7ffc97",
+            "on-background": "#1a1c19",
+            "tertiary": "#203800",
+            "surface-tint": "#2e6a41",
+            "primary-container": "#14532d",
+            "surface-container-high": "#e7e9e4",
+            "surface": "#f9faf5",
+            "secondary": "#006e2d",
+            "background": "#f9faf5",
+            "on-tertiary-fixed": "#102000",
+            "error-container": "#ffdad6",
+            "surface-variant": "#e2e3de",
+            "surface-container-highest": "#e2e3de",
+            "on-primary": "#ffffff",
+            "on-surface": "#1a1c19",
+            "on-secondary-fixed-variant": "#005320",
+            "inverse-surface": "#2e312e",
+            "inverse-primary": "#96d5a3",
+            "primary-fixed-dim": "#96d5a3",
+            "surface-dim": "#d9dad6",
+            "error": "#ba1a1a",
+            "surface-container": "#edeee9",
+            "on-primary-fixed-variant": "#12512c",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f4ef",
+            "secondary-container": "#7cf994",
+            "on-tertiary-fixed-variant": "#304f00",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#acf847",
+            "on-primary-fixed": "#00210d",
+            "on-secondary-fixed": "#002109",
+            "inverse-on-surface": "#f0f1ec"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "space-xl": "2.5rem",
+            "margin": "1.25rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-lg": ["Inter", "sans-serif"],
+            "headline-xl": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-xl": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "numeric-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "headline-xl": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "label-lg": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+            "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "18px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "numeric-xl": ["48px", {"lineHeight": "56px", "fontWeight": "800"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-full flex flex-col justify-between selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Viewport Container (Centered for responsive tablet/desktop views) -->
+<div class="w-full max-w-[440px] mx-auto min-h-screen bg-background flex flex-col relative pb-28">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-30 bg-surface-bright/95 backdrop-blur-md px-margin pt-3 pb-3 border-b border-surface-variant/60">
+<div class="flex items-center justify-between gap-3">
+<!-- Back Action -->
+<button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-lowest border border-outline-variant/60 text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Title & Step Progress Info -->
+<div class="flex-1 text-center">
+<h1 class="font-headline-sm text-headline-sm text-on-surface">कबाड़ की जानकारी</h1>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">कदम 2 of 3 • विवरण</span>
+</div>
+<!-- Help / Support Icon -->
+<button aria-label="Audio guide or help" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-primary active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+</div>
+<!-- Segmented Progress Bar (66% Progress) -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-300" style="width: 66%;"></div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-margin pt-4 space-y-5 flex-1">
+<!-- Selected Material Summary Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/80 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center text-primary-container text-2xl border border-secondary-container">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wide uppercase">चुना गया कबाड़</span>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span>PCB • सर्किट बोर्ड</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 text-primary bg-surface-container-low hover:bg-surface-container-high rounded-lg font-label-md text-label-md border border-outline-variant/60 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>बदलें</span>
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+</button>
+</section>
+<!-- Photo Upload & Capture Section -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">photo_camera</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">कबाड़ की फोटो लें</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2.5 py-0.5 rounded-full font-medium">ज़रूरी</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          फोटो से Recycler को सामग्री समझने और सही दाम तय करने में मदद मिलेगी
+        </p>
+<!-- Uploaded Photo Preview & Retake Banner -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 border border-outline-variant/80 space-y-3">
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-low border border-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up photograph of electronic scrap including green printed circuit boards, microchips, and gold-plated connectors placed in a clean collection tray under bright diffused studio light. The composition highlights crisp component details with natural environmental lighting and subtle green reflections, conveying modern high-value e-waste recycling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5QoeF6zjNNV5TurTuBqRzQO_r-cyhZCn_12s1Y_nO24cStPC9moWOz5b5oYXrpnWWL55wt5uCKnUvFqDlJ9xMdh4bwPuAYIptoPChktCGW74m-a48ATmKNCnKEahi6O1cHBpcp_CkL5e9ksCXUtYJz1TSPZUEnReN8MzqVHm3F7rnPf0SeI0PTVfBAnCESCE98n4_kmQlNhBxTLmyOnMEGJaVwhH4d-hEogVivvU2MPSwvPRJljsL"/>
+<div class="absolute top-2.5 left-2.5 bg-primary-container/90 backdrop-blur-sm text-on-primary px-2.5 py-1 rounded-full flex items-center gap-1.5 text-xs font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>1 फोटो संलग्न</span>
+</div>
+<!-- Retake Overlay Button -->
+<button class="absolute bottom-2.5 right-2.5 bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface px-3 py-1.5 rounded-xl font-label-md text-label-md flex items-center gap-1.5 shadow-md border border-outline-variant/50 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>दोबारा लें</span>
+</button>
+</div>
+<!-- Dual Source Action Buttons -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<button class="h-12 flex items-center justify-center gap-2 rounded-xl border-2 border-primary-container bg-surface-container-lowest text-primary-container font-label-lg text-label-lg active:scale-95 transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+<span>कैमरा खोलें</span>
+</button>
+<button class="h-12 flex items-center justify-center gap-2 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg border border-outline-variant/60 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+<span>गैलरी से चुनें</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Weight Section (लगभग वजन) -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">scale</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">लगभग वजन (किलो)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">अनुमानित</span>
+</div>
+<!-- Thumb-Friendly Large Numeric Input Display -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border-2 border-primary-container shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<div class="flex items-baseline">
+<span class="font-numeric-xl text-numeric-xl text-primary-container tracking-tight">12.5</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-primary-container text-on-primary font-headline-sm text-headline-sm px-3.5 py-1 rounded-xl shadow-xs">
+              KG
+            </span>
+<button aria-label="Clear or edit weight" class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Quick Weight Shortcut Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 no-scrollbar">
+<button class="px-3.5 py-2 min-w-[58px] rounded-xl bg-surface-container-lowest border border-outline-variant/70 text-on-surface font-label-md text-label-md active:scale-95 transition-all hover:bg-surface-container-low text-center" type="button">
+            1 KG
+          </button>
+<button class="px-3.5 py-2 min-w-[58px] rounded-xl bg-surface-container-lowest border border-outline-variant/70 text-on-surface font-label-md text-label-md active:scale-95 transition-all hover:bg-surface-container-low text-center" type="button">
+            5 KG
+          </button>
+<button class="px-4 py-2 min-w-[68px] rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md border-2 border-secondary font-bold shadow-xs active:scale-95 transition-all text-center" type="button">
+            10 KG ✓
+          </button>
+<button class="px-3.5 py-2 min-w-[58px] rounded-xl bg-surface-container-lowest border border-outline-variant/70 text-on-surface font-label-md text-label-md active:scale-95 transition-all hover:bg-surface-container-low text-center" type="button">
+            25 KG
+          </button>
+<button class="px-3.5 py-2 min-w-[58px] rounded-xl bg-surface-container-lowest border border-outline-variant/70 text-on-surface font-label-md text-label-md active:scale-95 transition-all hover:bg-surface-container-low text-center" type="button">
+            50 KG
+          </button>
+</div>
+</section>
+<!-- Condition Section (सामग्री की स्थिति) -->
+<section class="space-y-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">सामग्री की स्थिति</h2>
+</div>
+<!-- 4 Selectable Large Cards in 2x2 Bento Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Option 1: Good -->
+<div class="bg-surface-container-lowest border border-outline-variant/70 rounded-2xl p-3.5 flex flex-col justify-between h-24 active:scale-95 transition-all cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-outline text-[22px]">verified</span>
+<span class="w-5 h-5 rounded-full border border-outline-variant"></span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">अच्छा</p>
+<p class="font-label-sm text-label-sm text-outline">Good Condition</p>
+</div>
+</div>
+<!-- Option 2: Used / Old (Selected) -->
+<div class="bg-secondary-container/20 border-2 border-secondary rounded-2xl p-3.5 flex flex-col justify-between h-24 shadow-xs active:scale-95 transition-all cursor-pointer relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">history</span>
+<div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">पुरानी (Used)</p>
+<p class="font-label-sm text-label-sm text-secondary font-medium">कामकाजी / सामान्य</p>
+</div>
+</div>
+<!-- Option 3: Damaged -->
+<div class="bg-surface-container-lowest border border-outline-variant/70 rounded-2xl p-3.5 flex flex-col justify-between h-24 active:scale-95 transition-all cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-outline text-[22px]">heart_broken</span>
+<span class="w-5 h-5 rounded-full border border-outline-variant"></span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">खराब</p>
+<p class="font-label-sm text-label-sm text-outline">Damaged / Broken</p>
+</div>
+</div>
+<!-- Option 4: Mixed -->
+<div class="bg-surface-container-lowest border border-outline-variant/70 rounded-2xl p-3.5 flex flex-col justify-between h-24 active:scale-95 transition-all cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-outline text-[22px]">category</span>
+<span class="w-5 h-5 rounded-full border border-outline-variant"></span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">मिली-जुली</p>
+<p class="font-label-sm text-label-sm text-outline">Mixed Scrap</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Non-intrusive General Location Indicator Card -->
+<section class="bg-surface-container-low rounded-xl p-3 border border-outline-variant/50 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="text-left leading-tight">
+<p class="font-label-md text-label-md text-on-surface">📍 Gorakhpur, UP</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">सटीक घर का पता नहीं, केवल क्षेत्र का उपयोग होगा</p>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-bright/95 backdrop-blur-md px-margin py-3 border-t border-surface-variant/70">
+<div class="max-w-[440px] mx-auto flex items-center gap-3">
+<!-- Direct Next Action: High contrast green 54px target -->
+<button class="w-full h-[54px] rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md hover:bg-primary active:scale-[0.98] transition-all" type="button">
+<span>कीमत देखें</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

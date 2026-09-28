@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="hi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabadiwala Connect - मेरी कमाई (Earnings)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#315100",
+            "surface-dim": "#d9dad6",
+            "surface-tint": "#2e6a41",
+            "tertiary-fixed-dim": "#91db2a",
+            "surface-container-high": "#e7e9e4",
+            "on-tertiary-fixed-variant": "#304f00",
+            "outline": "#717970",
+            "primary-fixed-dim": "#96d5a3",
+            "secondary": "#006e2d",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#404941",
+            "on-primary-fixed-variant": "#12512c",
+            "primary": "#003b1b",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#96d5a3",
+            "on-tertiary-container": "#83cb14",
+            "secondary-fixed-dim": "#62df7d",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e2e3de",
+            "surface-container-low": "#f3f4ef",
+            "on-secondary-fixed": "#002109",
+            "on-error": "#ffffff",
+            "background": "#f9faf5",
+            "surface-variant": "#e2e3de",
+            "primary-fixed": "#b1f2be",
+            "tertiary-fixed": "#acf847",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#005320",
+            "on-secondary-container": "#007230",
+            "surface-bright": "#f9faf5",
+            "on-primary-fixed": "#00210d",
+            "inverse-surface": "#2e312e",
+            "on-primary-container": "#87c695",
+            "secondary-container": "#7cf994",
+            "on-tertiary-fixed": "#102000",
+            "secondary-fixed": "#7ffc97",
+            "inverse-on-surface": "#f0f1ec",
+            "surface-container": "#edeee9",
+            "tertiary": "#203800",
+            "surface": "#f9faf5",
+            "on-background": "#1a1c19",
+            "outline-variant": "#c0c9be",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-container": "#14532d",
+            "on-surface": "#1a1c19"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.375rem",
+            "margin": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "numeric-xl": ["Inter", "sans-serif"],
+            "numeric-lg": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-xl": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-sm": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "body-md": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "label-lg": ["Inter", "Noto Sans Devanagari", "sans-serif"],
+            "headline-md": ["Inter", "Noto Sans Devanagari", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "numeric-xl": ["48px", { "lineHeight": "56px", "fontWeight": "800" }],
+            "numeric-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background flex justify-center items-start min-h-screen font-body-md antialiased selection:bg-secondary-container">
+<!-- Mobile Screen Container (390px Max Standard) -->
+<main class="w-full max-w-[390px] bg-background min-h-screen flex flex-col relative pb-24 shadow-xl border-x border-outline-variant">
+<!-- Top App Bar Component (Docked Full-Width Top) -->
+<header class="bg-surface sticky top-0 z-40 px-margin py-space-sm h-auto flex flex-col justify-center border-b border-surface-variant">
+<div class="flex justify-between items-center w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<div>
+<h1 class="text-headline-sm font-headline-sm text-primary tracking-tight">मेरी कमाई</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Total Earnings &amp; History</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Location" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform duration-150 text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</button>
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm flex items-center justify-center border border-outline-variant text-sm font-bold">
+            KC
+          </div>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">आपके कबाड़ की बिक्री का पूरा हिसाब</p>
+</header>
+<!-- Main Content Canvas -->
+<div class="px-margin flex flex-col gap-space-md mt-space-sm">
+<!-- Total Earnings Hero Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant relative overflow-hidden shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm font-semibold text-on-surface-variant">कुल कमाई (Total Earnings) • इस महीने</span>
+<div class="text-numeric-xl font-numeric-xl text-primary tracking-tight mt-1">₹18,450</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+<!-- Supporting Indicator Badge -->
+<div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm font-bold">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="arrow_upward">arrow_upward</span>
+<span>↑ 8% पिछले महीने से ज्यादा (More than last month)</span>
+</div>
+</section>
+<!-- Summary Cards (2 Columns Bento Pattern) -->
+<section aria-label="Earnings status breakdown" class="grid grid-cols-2 gap-3">
+<!-- Card 1: Paid -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-label-sm font-label-sm font-semibold text-on-surface-variant">मिल चुका (Paid)</span>
+</div>
+<div class="text-numeric-lg font-numeric-lg text-primary tracking-tight">₹16,050</div>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center gap-1 text-on-secondary-container text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>खाते में / नकद</span>
+</div>
+</div>
+<!-- Card 2: Pending -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<span class="text-label-sm font-label-sm font-semibold text-on-surface-variant">बाकी (Pending)</span>
+</div>
+<div class="text-numeric-lg font-numeric-lg text-amber-700 tracking-tight">₹2,400</div>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center gap-1 text-amber-800 text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="schedule" data-weight="fill" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span>प्रोसेसिंग में</span>
+</div>
+</div>
+</section>
+<!-- Simple Earnings Trend Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h2 class="text-label-lg font-label-lg text-primary font-bold">कमाई का ट्रेंड</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant">पिछले 4 सप्ताह (Last 4 Weeks)</p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="bar_chart">bar_chart</span>
+</div>
+<!-- Minimal 4-Bar Chart Pattern -->
+<div class="flex items-end justify-between gap-3 h-32 pt-2 px-2 pb-1 border-b border-surface-variant">
+<!-- Week 1 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group">
+<span class="text-[10px] font-semibold text-on-surface-variant mb-1">₹3,200</span>
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all" style="height: 55%;"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-2 font-medium">W1</span>
+</div>
+<!-- Week 2 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group">
+<span class="text-[10px] font-semibold text-on-surface-variant mb-1">₹4,100</span>
+<div class="w-full bg-primary-fixed-dim rounded-t-lg transition-all" style="height: 70%;"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-2 font-medium">W2</span>
+</div>
+<!-- Week 3 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group">
+<span class="text-[10px] font-semibold text-on-surface-variant mb-1">₹5,350</span>
+<div class="w-full bg-secondary rounded-t-lg transition-all" style="height: 90%;"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-2 font-medium">W3</span>
+</div>
+<!-- Week 4 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group">
+<span class="text-[10px] font-bold text-primary mb-1">₹5,800</span>
+<div class="w-full bg-primary-container rounded-t-lg transition-all relative" style="height: 100%;">
+<span class="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-secondary-container rounded-full"></span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold mt-2">W4</span>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-3 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="verified">verified</span>
+<span>लगातार अच्छी कमाई, सीधे सही रीसाइक्लर से।</span>
+</p>
+</section>
+<!-- Transaction History Section -->
+<section class="flex flex-col gap-3">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<h2 class="text-headline-sm font-headline-sm text-primary font-bold">हाल की बिक्री</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Recent Transactions</span>
+</div>
+<!-- Category Filter Bar -->
+<div aria-label="Transaction filters" class="flex items-center gap-2 overflow-x-auto py-1" role="tablist">
+<button aria-selected="true" class="px-3.5 py-1.5 rounded-full text-label-sm font-label-sm font-bold bg-primary text-on-primary shadow-sm" role="tab">
+              सभी (All)
+            </button>
+<button aria-selected="false" class="px-3.5 py-1.5 rounded-full text-label-sm font-label-sm font-medium bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95 transition-transform" role="tab">
+              💵 नकद (Cash)
+            </button>
+<button aria-selected="false" class="px-3.5 py-1.5 rounded-full text-label-sm font-label-sm font-medium bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95 transition-transform" role="tab">
+              📱 UPI
+            </button>
+</div>
+</div>
+<!-- Transactions Stack -->
+<div class="flex flex-col gap-2.5">
+<!-- Item 1: PCB -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div class="flex items-start gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg text-on-surface font-bold flex items-center gap-1.5">
+<span>🔲 PCB</span>
+<span class="text-label-sm font-label-sm font-normal text-on-surface-variant">(12.5 KG)</span>
+</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Green E-Recyclers</p>
+<p class="text-label-sm font-label-sm text-outline">27 Sep 2026</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-headline-sm font-headline-sm font-extrabold text-secondary tracking-tight block">+₹3,560</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded-full mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Paid (Cash)
+                </span>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-surface-container text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-medium">
+<span>Mode:</span>
+<span class="text-on-surface font-semibold">💵 Cash</span>
+</span>
+<span class="text-outline font-medium text-[11px]">ID: TXN-89211</span>
+</div>
+</article>
+<!-- Item 2: Copper Cable -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div class="flex items-start gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="cable">cable</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg text-on-surface font-bold flex items-center gap-1.5">
+<span>🔌 Copper Cable</span>
+<span class="text-label-sm font-label-sm font-normal text-on-surface-variant">(18 KG)</span>
+</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">EcoCycle Solutions</p>
+<p class="text-label-sm font-label-sm text-outline">25 Sep 2026</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-headline-sm font-headline-sm font-extrabold text-secondary tracking-tight block">+₹2,880</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded-full mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Paid (UPI)
+                </span>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-surface-container text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-medium">
+<span>Mode:</span>
+<span class="text-on-surface font-semibold">📱 UPI</span>
+</span>
+<span class="text-outline font-medium text-[11px]">ID: TXN-89104</span>
+</div>
+</article>
+<!-- Item 3: Battery -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div class="flex items-start gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="battery_charging_full">battery_charging_full</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg text-on-surface font-bold flex items-center gap-1.5">
+<span>🔋 Battery</span>
+<span class="text-label-sm font-label-sm font-normal text-on-surface-variant">(8 KG)</span>
+</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">EcoSafe Yard</p>
+<p class="text-label-sm font-label-sm text-outline">22 Sep 2026</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-headline-sm font-headline-sm font-extrabold text-on-surface tracking-tight block">₹760</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Pending
+                </span>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-surface-container text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-medium">
+<span>Mode:</span>
+<span class="text-on-surface font-semibold">🏦 Bank</span>
+</span>
+<span class="text-outline font-medium text-[11px]">ID: TXN-88982</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Direct Assistance Card for Low-Literacy Support -->
+<section class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-primary font-bold">हिसाब में कोई समस्या?</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">मदद के लिए कॉल करें (Toll Free)</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant text-label-sm font-label-sm font-bold text-primary active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>कॉल</span>
+</button>
+</section>
+</div>
+<!-- Bottom Navigation Bar (Shared Component Anchor) -->
+<!-- Destination count: 4, labels: ["Home", "My Lots", "Earnings", "Profile"] -->
+<!-- Active State Logic: Screen is 'Earnings & Transactions' -> 'Earnings' is active -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 w-full max-w-[390px] z-50 flex justify-around items-center px-gutter py-space-xs min-h-[64px] bg-surface-container-lowest border-t border-surface-variant shadow-sm">
+<!-- Tab 1: Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="recycling">recycling</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<!-- Tab 2: My Lots -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-label-sm font-label-sm">My Lots</span>
+</a>
+<!-- Tab 3: Earnings (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-space-md py-space-xs font-semibold hover:bg-surface-container active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="payments" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-label-sm font-label-sm">Earnings</span>
+</a>
+<!-- Tab 4: Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Profile</span>
+</a>
+</nav>
+</main>
+</body></html>

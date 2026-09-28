@@ -1,0 +1,639 @@
+{
+  "info": {
+    "name": "Kabadiwala Connect API",
+    "_postman_id": "kc-api-v1-postman-collection",
+    "description": "Postman API Collection for Kabadiwala Connect - Bringing the Informal Collector into the Formal Recycling Chain MVP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000/api/v1",
+      "type": "string"
+    },
+    {
+      "key": "collectorToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "recyclerToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "lotId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "quoteId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "transactionId",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "1. Auth",
+      "item": [
+        {
+          "name": "Register Collector",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rajesh Shinde\",\n  \"phone\": \"+919811122233\",\n  \"password\": \"Password@123\",\n  \"role\": \"COLLECTOR\",\n  \"preferredLanguage\": \"MR\",\n  \"location\": {\n    \"city\": \"Pune\",\n    \"state\": \"Maharashtra\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login - Collector",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"+919876543210\",\n  \"password\": \"Password@123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login - Recycler",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"+919820011111\",\n  \"password\": \"Password@123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Me (Profile)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/auth/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Material Lots",
+      "item": [
+        {
+          "name": "Create Lot",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category\": \"PCB\",\n  \"subCategory\": \"Green telecom boards\",\n  \"approxWeight\": 12.5,\n  \"weightUnit\": \"KG\",\n  \"condition\": \"GOOD\",\n  \"sourceType\": \"SCRAP_COLLECTION\",\n  \"city\": \"Mumbai\",\n  \"state\": \"Maharashtra\",\n  \"address\": \"Dharavi Sector 3\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/lots",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get My Lots",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/lots/my",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots",
+                "my"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Lot By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/lots/{{lotId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots",
+                "{{lotId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Open Lots (Recycler)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{recyclerToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/lots/open?category=PCB",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots",
+                "open"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "PCB"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Prices",
+      "item": [
+        {
+          "name": "Get Current Prices",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/prices/current",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "prices",
+                "current"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Historical Prices",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/prices/history?materialCategory=PCB",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "prices",
+                "history"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Price by Category",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/prices/PCB",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "prices",
+                "PCB"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Recyclers",
+      "item": [
+        {
+          "name": "Get Verified Recyclers",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/recyclers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "recyclers"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Nearby Recyclers (Scored)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/recyclers/nearby?lat=19.0435&lng=72.8567&category=PCB&radius=50",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "recyclers",
+                "nearby"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Quotes",
+      "item": [
+        {
+          "name": "Submit Quote (Recycler)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{recyclerToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quotedPrice\": 3600,\n  \"pickupAvailable\": true,\n  \"message\": \"Can pick up tomorrow at 10 AM with verified digital scale\",\n  \"validDays\": 7\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/lots/{{lotId}}/quote",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots",
+                "{{lotId}}",
+                "quote"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Quotes For Lot",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/lots/{{lotId}}/quotes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "lots",
+                "{{lotId}}",
+                "quotes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Accept Quote (Collector)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"ACCEPT\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/quotes/{{quoteId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "quotes",
+                "{{quoteId}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Transactions & Handover",
+      "item": [
+        {
+          "name": "Get My Transactions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/transactions/my",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "transactions",
+                "my"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Transaction By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/transactions/{{transactionId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "transactions",
+                "{{transactionId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Complete Handover",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{recyclerToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"finalWeight\": 13,\n  \"finalPrice\": 3770,\n  \"paymentMethod\": \"UPI\",\n  \"paymentStatus\": \"PAID\",\n  \"latitude\": 19.0435,\n  \"longitude\": 72.8567,\n  \"handoverAddress\": \"Dharavi Sector 3, Mumbai\",\n  \"notes\": \"Clean verified PCB boards received and weighed.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/transactions/{{transactionId}}/handover",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "transactions",
+                "{{transactionId}}",
+                "handover"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Collector Earnings",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/users/me/earnings",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "earnings"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Traceability",
+      "item": [
+        {
+          "name": "Get Traceability by Lot ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{collectorToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/traceability/{{lotId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "traceability",
+                "{{lotId}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "8. Safety Guides",
+      "item": [
+        {
+          "name": "Get All Safety Guides (Hindi)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/safety?language=HI",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "safety"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "HI"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Safety Guides (Marathi)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/safety?language=MR",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "safety"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "MR"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Safety Guides by Category",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/safety/BATTERY",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "safety",
+                "BATTERY"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
